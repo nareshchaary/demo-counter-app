@@ -6,5 +6,11 @@ pipeline {
                 git branch: 'main', credentialsId: '93519b87-95ae-4835-969e-e99995f25cbd', url: 'https://github.com/nareshchaary/demo-counter-app.git'
             }
         }
+    
+        stage ("UNIT testing"){
+            steps {
+                sh "mvn test"
+             }
+        }
     }
 }
